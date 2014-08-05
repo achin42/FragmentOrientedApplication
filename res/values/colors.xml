@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="light_gray">#cdcdcd</color>
+    <color name="light_blue">#6096e0</color>
+    <color name="text_gray">#777777</color>
+    
+    <color name="home_row_inactive">#dddddd</color>
+    <color name="home_row_active">#55666666</color>
+</resources>

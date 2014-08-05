@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <RelativeLayout 
+        android:id="@+id/third_step_fragment_facebook_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:padding="10dp"
+        android:background="#cdcdcd"
+        android:clickable="true"
+        >
+        <ImageView
+            android:id="@+id/third_step_fragment_facebook_button_image"
+	        android:layout_width="40dp"
+	    	android:layout_height="40dp"
+	    	android:layout_alignParentRight="true"
+	    	android:background="@drawable/facebook_inactive_states"
+	    	android:duplicateParentState="true"
+	        >
+	    </ImageView>
+	    
+        <TextView 
+            android:id="@+id/third_step_fragment_facebook_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/third_step_fragment_facebook_button_image"
+            android:layout_centerVertical="true"
+            android:textColor="#777777"
+            android:text="Congratulations! You have reached to the top of the world. Share this.."
+            >
+        </TextView>
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        >
+        <TextView 
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="Third Step. Now Go Back!"
+            >
+        </TextView>
+        
+        <Button
+            android:id="@+id/third_step_fragment_go_back_1"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Go back 1 step"
+            >
+        </Button>
+        
+        <Button
+            android:id="@+id/third_step_fragment_go_back_2"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Go back 2 steps"
+            >
+        </Button>
+        
+        <Button
+            android:id="@+id/third_step_fragment_go_back_3"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Go back 3 steps"
+            >
+        </Button>
+    </LinearLayout>
+</RelativeLayout>

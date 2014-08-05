@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <android.support.v4.widget.DrawerLayout
+	    android:id="@+id/drawer_layout"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    >
+	    <FrameLayout
+            android:id="@+id/home_frame_layout_for_fragments"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent" 
+	        android:background="#eeeeee"
+	        >
+	    </FrameLayout>
+	    
+	    <LinearLayout 
+	        android:id="@+id/drawer"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_gravity="left"
+	        android:orientation="vertical"
+	        android:background="#dddddd"
+  			>
+  			<TextView 
+  			    android:id="@+id/main_nav_greetings_fragment_row"
+  			    android:layout_width="fill_parent"
+  			    android:layout_height="50dp"
+  			    android:text="Greetings"
+  			    android:gravity="center"
+  			    android:background="@drawable/home_row_background_states"
+  			    >
+	    	</TextView>
+	    	
+  			<View 
+  			    android:layout_width="fill_parent"
+  			    android:layout_height="1dp"
+  			    android:background="#55666666"
+  			    >
+	    	</View>
+	    	
+  			<TextView 
+  			    android:id="@+id/main_nav_list_fragment_row"
+  			    android:layout_width="fill_parent"
+  			    android:layout_height="50dp"
+  			    android:text="List Fragment"
+  			    android:gravity="center"
+  			    android:background="@drawable/home_row_background_states"
+  			    >
+	    	</TextView>
+	    	
+  			<View 
+  			    android:layout_width="fill_parent"
+  			    android:layout_height="1dp"
+  			    android:background="#55666666"
+  			    >
+	    	</View>
+  			
+  			<TextView 
+  			    android:id="@+id/main_nav_child_list_fragment_row"
+  			    android:layout_width="fill_parent"
+  			    android:layout_height="50dp"
+  			    android:text="Child List Fragment"
+  			    android:gravity="center"
+  			    android:background="@drawable/home_row_background_states"
+  			    >
+	    	</TextView>
+	    	
+  			<View 
+  			    android:layout_width="fill_parent"
+  			    android:layout_height="1dp"
+  			    android:background="#55666666"
+  			    >
+	    	</View>
+  			
+  			<TextView 
+  			    android:id="@+id/main_nav_back_tapper_fragment_row"
+  			    android:layout_width="fill_parent"
+  			    android:layout_height="50dp"
+  			    android:text="Back Tapper"
+  			    android:gravity="center"
+  			    android:background="@drawable/home_row_background_states"
+  			    >
+	    	</TextView>
+	    	
+  			<View 
+  			    android:layout_width="fill_parent"
+  			    android:layout_height="1dp"
+  			    android:background="#55666666"
+  			    >
+	    	</View>
+  			
+  			<TextView 
+  			    android:id="@+id/main_nav_step_fragment_row"
+  			    android:layout_width="fill_parent"
+  			    android:layout_height="50dp"
+  			    android:text="Steps"
+  			    android:gravity="center"
+  			    android:background="@drawable/home_row_background_states"
+  			    >
+	    	</TextView>
+	    	
+  			<View 
+  			    android:layout_width="fill_parent"
+  			    android:layout_height="1dp"
+  			    android:background="#55666666"
+  			    >
+	    	</View>
+	    	
+  			<RelativeLayout 
+  			    android:layout_width="fill_parent"
+  			    android:layout_height="fill_parent"
+  			    >
+  			    <Button
+  			        android:id="@+id/home_facebook_button"
+  			        android:layout_width="wrap_content"
+  			    	android:layout_height="wrap_content"
+  			    	android:layout_margin="10dp"
+  			    	android:layout_alignParentBottom="true"
+  			    	android:layout_centerVertical="true"
+  			    	android:background="@drawable/facebook_inactive_states"
+  			        >
+  			    </Button>
+  			</RelativeLayout>
+  		</LinearLayout>
+	</android.support.v4.widget.DrawerLayout>
+</RelativeLayout>

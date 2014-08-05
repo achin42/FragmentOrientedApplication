@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        >
+        <TextView 
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="Start Ascending!"
+            >
+        </TextView>
+        
+        <Button
+            android:id="@+id/step_fragment_go_to_1"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Go to step 1"
+            >
+        </Button>
+        
+        <Button
+            android:id="@+id/step_fragment_go_to_2"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Go to step 2"
+            >
+        </Button>
+    </LinearLayout>
+    
+    <TextView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:textSize="11dp"
+        android:layout_margin="10dp"
+        android:text="Demonstrates management of transaction backstack and how it is not a fragment backstack. Jump to higher steps and come back. First button will do transaction of adding one fragment, while second button will do transaction of adding two fragments. Watch how their corresponding popBackStack differ"
+        >
+    </TextView>
+</RelativeLayout>
