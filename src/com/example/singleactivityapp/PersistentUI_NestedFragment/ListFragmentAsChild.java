@@ -1,4 +1,4 @@
-package com.example.singleactivityapp;
+package com.example.singleactivityapp.PersistentUI_NestedFragment;
 
 import java.util.ArrayList;
 
@@ -12,7 +12,11 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.example.singleactivityapp.base.ListDetailFragment;
+import com.example.singleactivityapp.Home;
+import com.example.singleactivityapp.R;
+import com.example.singleactivityapp.R.id;
+import com.example.singleactivityapp.R.layout;
+import com.example.singleactivityapp.persistentUI_Fragment.ListDetailFragment;
 
 public class ListFragmentAsChild extends Fragment {
 	public static final String TAG = "List Fragment As Child";

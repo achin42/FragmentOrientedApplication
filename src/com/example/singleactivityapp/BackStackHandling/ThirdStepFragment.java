@@ -1,4 +1,4 @@
-package com.example.singleactivityapp.base;
+package com.example.singleactivityapp.BackStackHandling;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.example.singleactivityapp.R;
 import com.example.singleactivityapp.Utils.FacebookUtils;
+import com.example.singleactivityapp.base.SecondTierFragment;
 import com.facebook.Session;
 
 public class ThirdStepFragment extends SecondTierFragment {

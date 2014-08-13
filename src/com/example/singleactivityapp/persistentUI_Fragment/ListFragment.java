@@ -1,4 +1,4 @@
-package com.example.singleactivityapp.firsttier;
+package com.example.singleactivityapp.persistentUI_Fragment;
 
 import java.util.ArrayList;
 
@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.example.singleactivityapp.R;
+import com.example.singleactivityapp.firsttier.FirstTierFragment;
 
 public class ListFragment extends FirstTierFragment {
 	private static final String TAG = "List Fragment";

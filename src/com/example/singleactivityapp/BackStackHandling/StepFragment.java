@@ -1,9 +1,8 @@
-package com.example.singleactivityapp.firsttier;
+package com.example.singleactivityapp.BackStackHandling;
 
 import com.example.singleactivityapp.R;
-import com.example.singleactivityapp.base.FirstStepFragment;
-import com.example.singleactivityapp.base.SecondStepFragment;
 import com.example.singleactivityapp.base.SecondTierFragment;
+import com.example.singleactivityapp.firsttier.FirstTierFragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

@@ -1,4 +1,4 @@
-package com.example.singleactivityapp.firsttier;
+package com.example.singleactivityapp.InterFragmentCommunication;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.singleactivityapp.R;
+import com.example.singleactivityapp.firsttier.FirstTierFragment;
 
 public class GreetingsFragment extends FirstTierFragment {
 	private static final String TAG = "Greetings Fragment";

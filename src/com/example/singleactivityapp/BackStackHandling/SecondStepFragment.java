@@ -1,4 +1,4 @@
-package com.example.singleactivityapp.base;
+package com.example.singleactivityapp.BackStackHandling;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -8,6 +8,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 
 import com.example.singleactivityapp.R;
+import com.example.singleactivityapp.base.SecondTierFragment;
 
 public class SecondStepFragment extends SecondTierFragment {
 	public static final String TAG = "Second Step Fragment";

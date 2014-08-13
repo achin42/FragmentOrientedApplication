@@ -1,4 +1,4 @@
-package com.example.singleactivityapp.firsttier;
+package com.example.singleactivityapp.backHandledFragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.singleactivityapp.R;
+import com.example.singleactivityapp.firsttier.FirstTierFragment;
 
 public class BackTapperFragment extends FirstTierFragment {
 	private static final String TAG = "Child List Fragment";

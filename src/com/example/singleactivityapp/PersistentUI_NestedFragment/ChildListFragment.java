@@ -1,4 +1,4 @@
-package com.example.singleactivityapp.firsttier;
+package com.example.singleactivityapp.PersistentUI_NestedFragment;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
@@ -6,8 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.singleactivityapp.ListFragmentAsChild;
 import com.example.singleactivityapp.R;
+import com.example.singleactivityapp.firsttier.FirstTierFragment;
 
 public class ChildListFragment extends FirstTierFragment {
 	private static final String TAG = "Child List Fragment";

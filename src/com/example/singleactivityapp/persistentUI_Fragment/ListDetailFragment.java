@@ -1,6 +1,7 @@
-package com.example.singleactivityapp.base;
+package com.example.singleactivityapp.persistentUI_Fragment;
 
 import com.example.singleactivityapp.R;
+import com.example.singleactivityapp.base.SecondTierFragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
