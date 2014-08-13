@@ -9,8 +9,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.example.singleactivityapp.FacebookUtils;
 import com.example.singleactivityapp.R;
+import com.example.singleactivityapp.Utils.FacebookUtils;
 import com.facebook.Session;
 
 public class GreetingsFragment2 extends SecondTierFragment {

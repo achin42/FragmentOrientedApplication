@@ -1,4 +1,4 @@
-package com.example.singleactivityapp;
+package com.example.singleactivityapp.Utils;
 
 import android.app.Activity;
 import android.os.Bundle;
