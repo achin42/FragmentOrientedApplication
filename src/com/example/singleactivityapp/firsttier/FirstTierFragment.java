@@ -1,7 +1,7 @@
 package com.example.singleactivityapp.firsttier;
 
 import com.example.singleactivityapp.Home;
-import com.example.singleactivityapp.secondtier.SecondTierFragment;
+import com.example.singleactivityapp.base.SecondTierFragment;
 
 
 public abstract class FirstTierFragment extends SecondTierFragment {

@@ -1,4 +1,4 @@
-package com.example.singleactivityapp.secondtier;
+package com.example.singleactivityapp.base;
 
 import com.example.singleactivityapp.R;
 

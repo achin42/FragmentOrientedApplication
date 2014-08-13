@@ -12,7 +12,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.example.singleactivityapp.secondtier.ListDetailFragment;
+import com.example.singleactivityapp.base.ListDetailFragment;
 
 public class ListFragmentAsChild extends Fragment {
 	public static final String TAG = "List Fragment As Child";

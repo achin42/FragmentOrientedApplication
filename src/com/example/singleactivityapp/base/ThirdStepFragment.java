@@ -1,4 +1,4 @@
-package com.example.singleactivityapp.secondtier;
+package com.example.singleactivityapp.base;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

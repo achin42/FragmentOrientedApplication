@@ -1,9 +1,9 @@
 package com.example.singleactivityapp.firsttier;
 
 import com.example.singleactivityapp.R;
-import com.example.singleactivityapp.secondtier.FirstStepFragment;
-import com.example.singleactivityapp.secondtier.SecondStepFragment;
-import com.example.singleactivityapp.secondtier.SecondTierFragment;
+import com.example.singleactivityapp.base.FirstStepFragment;
+import com.example.singleactivityapp.base.SecondStepFragment;
+import com.example.singleactivityapp.base.SecondTierFragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
