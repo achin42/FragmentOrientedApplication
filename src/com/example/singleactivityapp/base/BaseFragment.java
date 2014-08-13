@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 
 import com.example.singleactivityapp.firsttier.FirstTierFragment;
 
-public abstract class SecondTierFragment extends Fragment {
+public abstract class BaseFragment extends Fragment {
 	protected SecondTierCommunicator secondTierCommunicator;
 	
 	/**

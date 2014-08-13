@@ -1,10 +1,10 @@
 package com.example.singleactivityapp.firsttier;
 
 import com.example.singleactivityapp.Home;
-import com.example.singleactivityapp.base.SecondTierFragment;
+import com.example.singleactivityapp.base.BaseFragment;
 
 
-public abstract class FirstTierFragment extends SecondTierFragment {
+public abstract class FirstTierFragment extends BaseFragment {
 
 	@Override
 	public void onStart() {

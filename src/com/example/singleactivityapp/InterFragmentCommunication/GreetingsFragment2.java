@@ -11,10 +11,10 @@ import android.widget.TextView;
 
 import com.example.singleactivityapp.R;
 import com.example.singleactivityapp.Utils.FacebookUtils;
-import com.example.singleactivityapp.base.SecondTierFragment;
+import com.example.singleactivityapp.base.BaseFragment;
 import com.facebook.Session;
 
-public class GreetingsFragment2 extends SecondTierFragment {
+public class GreetingsFragment2 extends BaseFragment {
 	private static final String TAG = "Greetings Fragment 2";
 	private static final String EXTRA_NAME = "extra_name";
 	

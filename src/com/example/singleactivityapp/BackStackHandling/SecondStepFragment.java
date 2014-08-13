@@ -8,9 +8,9 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 
 import com.example.singleactivityapp.R;
-import com.example.singleactivityapp.base.SecondTierFragment;
+import com.example.singleactivityapp.base.BaseFragment;
 
-public class SecondStepFragment extends SecondTierFragment {
+public class SecondStepFragment extends BaseFragment {
 	public static final String TAG = "Second Step Fragment";
 	
 	@Override

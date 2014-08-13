@@ -1,7 +1,7 @@
 package com.example.singleactivityapp.persistentUI_Fragment;
 
 import com.example.singleactivityapp.R;
-import com.example.singleactivityapp.base.SecondTierFragment;
+import com.example.singleactivityapp.base.BaseFragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-public class ListDetailFragment extends SecondTierFragment {
+public class ListDetailFragment extends BaseFragment {
 	private static final String TAG = "List Detail Fragment";
 	private static final String EXTRA_WORD_TO_SHOW = "extra_word_to_show";
 	

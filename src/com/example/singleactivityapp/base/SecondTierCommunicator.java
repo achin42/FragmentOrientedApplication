@@ -3,10 +3,10 @@ package com.example.singleactivityapp.base;
 public interface SecondTierCommunicator {
 	public void lockDrawer();
 	public void unlockDrawer();
-	public void setSelectedFragment(SecondTierFragment secondTierFragment);
+	public void setSelectedFragment(BaseFragment secondTierFragment);
 	public void popBackStack();
 	public void popBackStackTillTag(String tag);
-	public void showSecondTierFragment(SecondTierFragment secondTierFragment, boolean withAnimation);
-	public void addMultipleSecondTierFragments(SecondTierFragment secondTierFragments[]);
+	public void showSecondTierFragment(BaseFragment secondTierFragment, boolean withAnimation);
+	public void addMultipleSecondTierFragments(BaseFragment secondTierFragments[]);
 	public void onClickLogin();
 }

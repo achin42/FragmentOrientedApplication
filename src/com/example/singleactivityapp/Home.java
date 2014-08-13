@@ -21,7 +21,7 @@ import com.example.singleactivityapp.InterFragmentCommunication.GreetingsFragmen
 import com.example.singleactivityapp.InterFragmentCommunication.GreetingsFragment2;
 import com.example.singleactivityapp.PersistentUI_NestedFragment.ChildListFragment;
 import com.example.singleactivityapp.backHandledFragment.BackTapperFragment;
-import com.example.singleactivityapp.base.SecondTierFragment;
+import com.example.singleactivityapp.base.BaseFragment;
 import com.example.singleactivityapp.firsttier.FirstTierFragment;
 import com.example.singleactivityapp.persistentUI_Fragment.ListDetailFragment;
 import com.example.singleactivityapp.persistentUI_Fragment.ListFragment;
@@ -35,7 +35,7 @@ public class Home extends FragmentActivity implements HomeInterface {
 
 	private DrawerLayout drawer;
 	private Button facebookButton;
-	private SecondTierFragment selectedFragment;
+	private BaseFragment selectedFragment;
 	private FirstTierFragment selectedBaseFragment;
 	
 	private boolean isWarnedToClose = false;
@@ -161,7 +161,7 @@ public class Home extends FragmentActivity implements HomeInterface {
     }
     
     @Override
-	public void setSelectedFragment(SecondTierFragment selectedFragment) {
+	public void setSelectedFragment(BaseFragment selectedFragment) {
 		this.selectedFragment = selectedFragment;
 	}
 	
@@ -249,7 +249,7 @@ public class Home extends FragmentActivity implements HomeInterface {
 	}
 
 	@Override
-	public void showSecondTierFragment(SecondTierFragment secondTierFragment, boolean withAnimation) {
+	public void showSecondTierFragment(BaseFragment secondTierFragment, boolean withAnimation) {
 		FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
 		
 		if(withAnimation) {
@@ -305,7 +305,7 @@ public class Home extends FragmentActivity implements HomeInterface {
 	 * backstack. Not a method to be used normally. 
 	 */
 	@Override
-	public void addMultipleSecondTierFragments(SecondTierFragment[] secondTierFragments) {
+	public void addMultipleSecondTierFragments(BaseFragment[] secondTierFragments) {
 		// Initialize a Fragment Transaction.
 		FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
 		

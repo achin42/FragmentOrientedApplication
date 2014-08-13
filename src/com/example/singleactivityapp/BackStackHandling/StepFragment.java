@@ -1,7 +1,7 @@
 package com.example.singleactivityapp.BackStackHandling;
 
 import com.example.singleactivityapp.R;
-import com.example.singleactivityapp.base.SecondTierFragment;
+import com.example.singleactivityapp.base.BaseFragment;
 import com.example.singleactivityapp.firsttier.FirstTierFragment;
 
 import android.os.Bundle;
@@ -47,7 +47,7 @@ public class StepFragment extends FirstTierFragment {
 			
 			@Override
 			public void onClick(View arg0) {
-				SecondTierFragment[] secondTierFragments = new SecondTierFragment[2];
+				BaseFragment[] secondTierFragments = new BaseFragment[2];
 				secondTierFragments[0] = new FirstStepFragment();
 				secondTierFragments[1] = new SecondStepFragment();
 				secondTierCommunicator.addMultipleSecondTierFragments(secondTierFragments);

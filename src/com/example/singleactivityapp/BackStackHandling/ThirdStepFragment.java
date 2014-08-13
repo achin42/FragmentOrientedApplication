@@ -12,10 +12,10 @@ import android.widget.TextView;
 
 import com.example.singleactivityapp.R;
 import com.example.singleactivityapp.Utils.FacebookUtils;
-import com.example.singleactivityapp.base.SecondTierFragment;
+import com.example.singleactivityapp.base.BaseFragment;
 import com.facebook.Session;
 
-public class ThirdStepFragment extends SecondTierFragment {
+public class ThirdStepFragment extends BaseFragment {
 	public static final String TAG = "Third Step Fragment";
 	
 	private RelativeLayout facebookButton;
