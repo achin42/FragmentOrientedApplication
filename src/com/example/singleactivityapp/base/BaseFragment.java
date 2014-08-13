@@ -81,13 +81,5 @@ public abstract class BaseFragment extends Fragment {
 		
 		// Mark this fragment as the selected Fragment.
 		hostActivity.setSelectedFragment(this);
-		
-		if(this instanceof DrawerItemBaseFragment) {
-			// If foreground fragment is drawer item, unlock drawer
-			hostActivity.unlockDrawer();
-		} else {
-			// If foreground fragment is not drawer item, lock drawer
-			hostActivity.lockDrawer();
-		}
 	}
 }

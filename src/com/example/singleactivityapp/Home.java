@@ -143,26 +143,18 @@ public class Home extends FragmentActivity implements HomeInterface {
 			drawer.closeDrawer(Gravity.LEFT);
 		}
 	}
-	
-	@Override
-	public void lockDrawer() {
-		if(isDrawerLocked) {
-			isDrawerLocked = false;
-	    	drawer.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
-		}
-    }
-    
-	@Override
-    public void unlockDrawer() {
-    	if(!isDrawerLocked) {
-    		isDrawerLocked = true;
-        	drawer.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED);
-    	}
-    }
     
     @Override
 	public void setSelectedFragment(BaseFragment selectedFragment) {
 		this.selectedFragment = selectedFragment;
+		
+		if(selectedFragment instanceof DrawerItemBaseFragment) {
+			// If foreground fragment is drawer item, unlock drawer
+			unlockDrawer();
+		} else {
+			// If foreground fragment is not drawer item, lock drawer
+			lockDrawer();
+		}
 	}
 	
 
@@ -232,6 +224,20 @@ public class Home extends FragmentActivity implements HomeInterface {
 		
 		
 	}
+	
+	private void lockDrawer() {
+		if(isDrawerLocked) {
+			isDrawerLocked = false;
+	    	drawer.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
+		}
+    }
+    
+	private void unlockDrawer() {
+    	if(!isDrawerLocked) {
+    		isDrawerLocked = true;
+        	drawer.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED);
+    	}
+    }
 	
 	private void showFirstTierFragment(DrawerItemBaseFragment firstTierFragment) {
 		// Clear backstack if app is not at a first-tier fragment

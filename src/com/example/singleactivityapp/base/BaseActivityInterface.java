@@ -1,8 +1,6 @@
 package com.example.singleactivityapp.base;
 
 public interface BaseActivityInterface {
-	public void lockDrawer();
-	public void unlockDrawer();
 	public void setSelectedFragment(BaseFragment secondTierFragment);
 	public void popBackStack();
 	public void popBackStackTillTag(String tag);
