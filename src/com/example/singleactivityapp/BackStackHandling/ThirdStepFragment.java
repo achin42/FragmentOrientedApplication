@@ -29,7 +29,7 @@ public class ThirdStepFragment extends BaseFragment {
 
 	@Override
 	public boolean onBackPressed() {
-		secondTierCommunicator.popBackStack();
+		hostActivity.popBackStack();
 		return true;
 	}
 	
@@ -76,7 +76,7 @@ public class ThirdStepFragment extends BaseFragment {
 				if(facebookSession.isOpened()) {
 					FacebookUtils.postOnWall(getActivity(), "From Single Activity Fragment", "I reached to the top of the world!", "www.google.com");
 				} else {
-					secondTierCommunicator.onClickLogin();
+					hostActivity.onClickLogin();
 				}
 			}
 		});
@@ -87,7 +87,7 @@ public class ThirdStepFragment extends BaseFragment {
 			@Override
 			public void onClick(View v) {
 				// Call popBackStack to move back one step
-				secondTierCommunicator.popBackStack();
+				hostActivity.popBackStack();
 			}
 		});
 
@@ -97,7 +97,7 @@ public class ThirdStepFragment extends BaseFragment {
 			@Override
 			public void onClick(View v) {
 				// Call popBackStackTillTag to move back multiple steps
-				secondTierCommunicator.popBackStackTillTag(SecondStepFragment.TAG);
+				hostActivity.popBackStackTillTag(SecondStepFragment.TAG);
 			}
 		});
 
@@ -107,7 +107,7 @@ public class ThirdStepFragment extends BaseFragment {
 			@Override
 			public void onClick(View v) {
 				// Call popBackStackTillTag to move back multiple steps
-				secondTierCommunicator.popBackStackTillTag(FirstStepFragment.TAG);
+				hostActivity.popBackStackTillTag(FirstStepFragment.TAG);
 			}
 		});
 	}

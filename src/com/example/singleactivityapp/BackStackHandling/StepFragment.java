@@ -38,7 +38,7 @@ public class StepFragment extends FirstTierFragment {
 			
 			@Override
 			public void onClick(View arg0) {
-				secondTierCommunicator.showSecondTierFragment(new FirstStepFragment(), true);
+				hostActivity.showSecondTierFragment(new FirstStepFragment(), true);
 			}
 		});
 		
@@ -50,7 +50,7 @@ public class StepFragment extends FirstTierFragment {
 				BaseFragment[] secondTierFragments = new BaseFragment[2];
 				secondTierFragments[0] = new FirstStepFragment();
 				secondTierFragments[1] = new SecondStepFragment();
-				secondTierCommunicator.addMultipleSecondTierFragments(secondTierFragments);
+				hostActivity.addMultipleSecondTierFragments(secondTierFragments);
 			}
 		});
 	}

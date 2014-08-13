@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import com.example.singleactivityapp.firsttier.FirstTierFragment;
 
 public abstract class BaseFragment extends Fragment {
-	protected BaseInterface secondTierCommunicator;
+	protected BaseInterface hostActivity;
 	
 	/**
 	 * Used to save from reinitializing Views when onViewCreated is called
@@ -72,7 +72,7 @@ public abstract class BaseFragment extends Fragment {
 		if(!(getActivity()  instanceof BaseInterface)) {
 			throw new ClassCastException("Hosting activity must implement SecondTierCommunicator");
 		} else {
-			secondTierCommunicator = (BaseInterface) getActivity();
+			hostActivity = (BaseInterface) getActivity();
 		}
 	}
 	
@@ -81,14 +81,14 @@ public abstract class BaseFragment extends Fragment {
 		super.onStart();
 		
 		// Mark this fragment as the selected Fragment.
-		secondTierCommunicator.setSelectedFragment(this);
+		hostActivity.setSelectedFragment(this);
 		
 		if(this instanceof FirstTierFragment) {
 			// If foreground fragment is first tier, unlock drawer
-			secondTierCommunicator.unlockDrawer();
+			hostActivity.unlockDrawer();
 		} else {
 			// If foreground fragment is second tier, lock drawer
-			secondTierCommunicator.lockDrawer();
+			hostActivity.lockDrawer();
 		}
 	}
 }

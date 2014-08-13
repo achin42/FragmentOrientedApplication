@@ -30,7 +30,7 @@ public class ListDetailFragment extends BaseFragment {
 
 	@Override
 	public boolean onBackPressed() {
-		secondTierCommunicator.popBackStack();
+		hostActivity.popBackStack();
 		return true;
 	}
 	
