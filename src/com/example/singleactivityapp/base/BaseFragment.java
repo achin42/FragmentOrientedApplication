@@ -6,10 +6,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.singleactivityapp.firsttier.FirstTierFragment;
-
 public abstract class BaseFragment extends Fragment {
-	protected BaseInterface hostActivity;
+	
+	protected BaseActivityInterface hostActivity;
 	
 	/**
 	 * Used to save from reinitializing Views when onViewCreated is called
@@ -69,10 +68,10 @@ public abstract class BaseFragment extends Fragment {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		if(!(getActivity()  instanceof BaseInterface)) {
-			throw new ClassCastException("Hosting activity must implement SecondTierCommunicator");
+		if(!(getActivity()  instanceof BaseActivityInterface)) {
+			throw new ClassCastException("Hosting activity must implement BaseActivityInterface");
 		} else {
-			hostActivity = (BaseInterface) getActivity();
+			hostActivity = (BaseActivityInterface) getActivity();
 		}
 	}
 	
@@ -83,11 +82,11 @@ public abstract class BaseFragment extends Fragment {
 		// Mark this fragment as the selected Fragment.
 		hostActivity.setSelectedFragment(this);
 		
-		if(this instanceof FirstTierFragment) {
-			// If foreground fragment is first tier, unlock drawer
+		if(this instanceof DrawerItemBaseFragment) {
+			// If foreground fragment is drawer item, unlock drawer
 			hostActivity.unlockDrawer();
 		} else {
-			// If foreground fragment is second tier, lock drawer
+			// If foreground fragment is not drawer item, lock drawer
 			hostActivity.lockDrawer();
 		}
 	}

@@ -22,7 +22,7 @@ import com.example.singleactivityapp.InterFragmentCommunication.GreetingsFragmen
 import com.example.singleactivityapp.PersistentUI_NestedFragment.ChildListFragment;
 import com.example.singleactivityapp.backHandledFragment.BackTapperFragment;
 import com.example.singleactivityapp.base.BaseFragment;
-import com.example.singleactivityapp.firsttier.FirstTierFragment;
+import com.example.singleactivityapp.base.DrawerItemBaseFragment;
 import com.example.singleactivityapp.persistentUI_Fragment.ListDetailFragment;
 import com.example.singleactivityapp.persistentUI_Fragment.ListFragment;
 import com.facebook.LoggingBehavior;
@@ -36,7 +36,7 @@ public class Home extends FragmentActivity implements HomeInterface {
 	private DrawerLayout drawer;
 	private Button facebookButton;
 	private BaseFragment selectedFragment;
-	private FirstTierFragment selectedBaseFragment;
+	private DrawerItemBaseFragment selectedDrawerItemFragment;
 	
 	private boolean isWarnedToClose = false;
 	
@@ -165,9 +165,7 @@ public class Home extends FragmentActivity implements HomeInterface {
 		this.selectedFragment = selectedFragment;
 	}
 	
-	public void setSelectedBaseFragment(FirstTierFragment selectedBaseFragment) {
-		this.selectedBaseFragment = selectedBaseFragment;
-	}
+
 	
 	private void initUI() {
 		facebookButton = (Button) findViewById(R.id.home_facebook_button);
@@ -176,7 +174,7 @@ public class Home extends FragmentActivity implements HomeInterface {
 			
 			@Override
 			public void onClick(View v) {
-				if(!(selectedBaseFragment instanceof GreetingsFragment)) {
+				if(!(selectedDrawerItemFragment instanceof GreetingsFragment)) {
 					showFirstTierFragment(new GreetingsFragment());
 				}
 				
@@ -188,7 +186,7 @@ public class Home extends FragmentActivity implements HomeInterface {
 			
 			@Override
 			public void onClick(View v) {
-				if(!(selectedBaseFragment instanceof BackTapperFragment)) {
+				if(!(selectedDrawerItemFragment instanceof BackTapperFragment)) {
 					showFirstTierFragment(new BackTapperFragment());
 				}
 				
@@ -200,7 +198,7 @@ public class Home extends FragmentActivity implements HomeInterface {
 			
 			@Override
 			public void onClick(View v) {
-				if(!(selectedBaseFragment instanceof StepFragment)) {
+				if(!(selectedDrawerItemFragment instanceof StepFragment)) {
 					showFirstTierFragment(new StepFragment());
 				}
 				
@@ -212,7 +210,7 @@ public class Home extends FragmentActivity implements HomeInterface {
 			
 			@Override
 			public void onClick(View v) {
-				if(!(selectedBaseFragment instanceof ListFragment)) {
+				if(!(selectedDrawerItemFragment instanceof ListFragment)) {
 					showFirstTierFragment(new ListFragment());
 				}
 				
@@ -224,7 +222,7 @@ public class Home extends FragmentActivity implements HomeInterface {
 			
 			@Override
 			public void onClick(View v) {
-				if(!(selectedBaseFragment instanceof ChildListFragment)) {
+				if(!(selectedDrawerItemFragment instanceof ChildListFragment)) {
 					showFirstTierFragment(new ChildListFragment());
 				}
 				
@@ -235,11 +233,11 @@ public class Home extends FragmentActivity implements HomeInterface {
 		
 	}
 	
-	private void showFirstTierFragment(FirstTierFragment firstTierFragment) {
+	private void showFirstTierFragment(DrawerItemBaseFragment firstTierFragment) {
 		// Clear backstack if app is not at a first-tier fragment
 		// and drawer is not locked, so that app could be switched between
 		// any first-tier fragment from anywhere.
-		if(!(selectedFragment instanceof FirstTierFragment) && !isDrawerLocked) {
+		if(!(selectedFragment instanceof DrawerItemBaseFragment) && !isDrawerLocked) {
 			clearBackStack();
 		}
 		
@@ -298,6 +296,12 @@ public class Home extends FragmentActivity implements HomeInterface {
 	public void showListDetail(String word) {
 		showSecondTierFragment(ListDetailFragment.instance(word), true);
 	}
+	
+	
+	@Override
+	public void setSelectedDrawerItem(DrawerItemBaseFragment fragment) {
+		this.selectedDrawerItemFragment = fragment;
+	}
 
 	
 	/**
@@ -321,11 +325,6 @@ public class Home extends FragmentActivity implements HomeInterface {
 		// Commit the transaction.
         ft.commit();
 	}
-	
-	
-	
-	
-	
 	
 	
 	

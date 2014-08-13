@@ -12,9 +12,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.example.singleactivityapp.R;
-import com.example.singleactivityapp.firsttier.FirstTierFragment;
+import com.example.singleactivityapp.base.DrawerItemBaseFragment;
 
-public class ListFragment extends FirstTierFragment {
+public class ListFragment extends DrawerItemBaseFragment {
 	private static final String TAG = "List Fragment";
 	
 	private ListFragmentCommunicator listFragmentCommunicator;

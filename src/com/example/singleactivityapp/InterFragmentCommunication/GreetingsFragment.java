@@ -10,9 +10,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.singleactivityapp.R;
-import com.example.singleactivityapp.firsttier.FirstTierFragment;
+import com.example.singleactivityapp.base.DrawerItemBaseFragment;
 
-public class GreetingsFragment extends FirstTierFragment {
+public class GreetingsFragment extends DrawerItemBaseFragment {
 	private static final String TAG = "Greetings Fragment";
 
 	private GreetingsFragmentCommunicator greetingsFragmentCommunicator;

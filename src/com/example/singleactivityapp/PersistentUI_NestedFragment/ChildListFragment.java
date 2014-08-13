@@ -7,9 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.singleactivityapp.R;
-import com.example.singleactivityapp.firsttier.FirstTierFragment;
+import com.example.singleactivityapp.base.DrawerItemBaseFragment;
 
-public class ChildListFragment extends FirstTierFragment {
+public class ChildListFragment extends DrawerItemBaseFragment {
 	private static final String TAG = "Child List Fragment";
 	
 	@Override

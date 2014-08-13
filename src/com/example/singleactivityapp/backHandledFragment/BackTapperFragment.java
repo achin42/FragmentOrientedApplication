@@ -7,9 +7,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.singleactivityapp.R;
-import com.example.singleactivityapp.firsttier.FirstTierFragment;
+import com.example.singleactivityapp.base.DrawerItemBaseFragment;
 
-public class BackTapperFragment extends FirstTierFragment {
+public class BackTapperFragment extends DrawerItemBaseFragment {
 	private static final String TAG = "Child List Fragment";
 	
 	private boolean hasText1Changed = false;
