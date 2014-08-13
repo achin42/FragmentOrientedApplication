@@ -1,6 +1,6 @@
 package com.example.singleactivityapp.base;
 
-public interface SecondTierCommunicator {
+public interface BaseInterface {
 	public void lockDrawer();
 	public void unlockDrawer();
 	public void setSelectedFragment(BaseFragment secondTierFragment);

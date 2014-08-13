@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import com.example.singleactivityapp.firsttier.FirstTierFragment;
 
 public abstract class BaseFragment extends Fragment {
-	protected SecondTierCommunicator secondTierCommunicator;
+	protected BaseInterface secondTierCommunicator;
 	
 	/**
 	 * Used to save from reinitializing Views when onViewCreated is called
@@ -69,10 +69,10 @@ public abstract class BaseFragment extends Fragment {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		if(!(getActivity()  instanceof SecondTierCommunicator)) {
+		if(!(getActivity()  instanceof BaseInterface)) {
 			throw new ClassCastException("Hosting activity must implement SecondTierCommunicator");
 		} else {
-			secondTierCommunicator = (SecondTierCommunicator) getActivity();
+			secondTierCommunicator = (BaseInterface) getActivity();
 		}
 	}
 	
