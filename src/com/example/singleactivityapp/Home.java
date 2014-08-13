@@ -172,7 +172,7 @@ public class Home extends FragmentActivity implements HomeInterface {
 	private void initUI() {
 		facebookButton = (Button) findViewById(R.id.home_facebook_button);
 		
-		((TextView) findViewById(R.id.main_nav_greetings_fragment_row)).setOnClickListener(new OnClickListener() {
+		((TextView) findViewById(R.id.drawer_inter_fragment_fragment_row)).setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
@@ -184,31 +184,7 @@ public class Home extends FragmentActivity implements HomeInterface {
 			}
 		});
 		
-		((TextView) findViewById(R.id.main_nav_list_fragment_row)).setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				if(!(selectedBaseFragment instanceof ListFragment)) {
-					showFirstTierFragment(new ListFragment());
-				}
-				
-				closeDrawer();
-			}
-		});
-		
-		((TextView) findViewById(R.id.main_nav_child_list_fragment_row)).setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				if(!(selectedBaseFragment instanceof ChildListFragment)) {
-					showFirstTierFragment(new ChildListFragment());
-				}
-				
-				closeDrawer();
-			}
-		});
-		
-		((TextView) findViewById(R.id.main_nav_back_tapper_fragment_row)).setOnClickListener(new OnClickListener() {
+		((TextView) findViewById(R.id.drawer_back_handled_fragment_row)).setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
@@ -220,7 +196,7 @@ public class Home extends FragmentActivity implements HomeInterface {
 			}
 		});
 		
-		((TextView) findViewById(R.id.main_nav_step_fragment_row)).setOnClickListener(new OnClickListener() {
+		((TextView) findViewById(R.id.drawer_back_stack_row)).setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
@@ -231,6 +207,32 @@ public class Home extends FragmentActivity implements HomeInterface {
 				closeDrawer();
 			}
 		});
+		
+		((TextView) findViewById(R.id.drawer_persistent_ui_fragment_row)).setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				if(!(selectedBaseFragment instanceof ListFragment)) {
+					showFirstTierFragment(new ListFragment());
+				}
+				
+				closeDrawer();
+			}
+		});
+		
+		((TextView) findViewById(R.id.drawer_persistent_ui_nested_fragment_row)).setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				if(!(selectedBaseFragment instanceof ChildListFragment)) {
+					showFirstTierFragment(new ChildListFragment());
+				}
+				
+				closeDrawer();
+			}
+		});
+		
+		
 	}
 	
 	private void showFirstTierFragment(FirstTierFragment firstTierFragment) {

@@ -164,8 +164,11 @@ containing a value of this type.
         public static final int com_facebook_usersettingsfragment_connected_shadow_color=0x7f070004;
         public static final int com_facebook_usersettingsfragment_connected_text_color=0x7f070003;
         public static final int com_facebook_usersettingsfragment_not_connected_text_color=0x7f070005;
-        public static final int home_row_active=0x7f07000b;
-        public static final int home_row_inactive=0x7f07000a;
+        public static final int divider_color=0x7f07000e;
+        public static final int home_drawer_background=0x7f07000b;
+        public static final int home_frame_layout_background=0x7f07000a;
+        public static final int home_row_active=0x7f07000d;
+        public static final int home_row_inactive=0x7f07000c;
         public static final int light_blue=0x7f070008;
         public static final int light_gray=0x7f070007;
         public static final int text_gray=0x7f070009;
@@ -185,6 +188,8 @@ containing a value of this type.
         public static final int com_facebook_tooltip_horizontal_padding=0x7f06000d;
         public static final int com_facebook_usersettingsfragment_profile_picture_height=0x7f060003;
         public static final int com_facebook_usersettingsfragment_profile_picture_width=0x7f060002;
+        public static final int divider_height=0x7f06000f;
+        public static final int drawer_irem_height=0x7f06000e;
     }
     public static final class drawable {
         public static final int com_facebook_button_blue=0x7f020000;
@@ -268,7 +273,12 @@ containing a value of this type.
         public static final int com_facebook_usersettingsfragment_logo_image=0x7f05001d;
         public static final int com_facebook_usersettingsfragment_profile_name=0x7f05001e;
         public static final int drawer=0x7f05002a;
+        public static final int drawer_back_handled_fragment_row=0x7f05002c;
+        public static final int drawer_back_stack_row=0x7f05002d;
+        public static final int drawer_inter_fragment_fragment_row=0x7f05002b;
         public static final int drawer_layout=0x7f050028;
+        public static final int drawer_persistent_ui_fragment_row=0x7f05002e;
+        public static final int drawer_persistent_ui_nested_fragment_row=0x7f05002f;
         public static final int first_step_fragment_go_back_1=0x7f050021;
         public static final int first_step_fragment_go_to_2=0x7f050020;
         public static final int greetings_fragment_2_facebook_button=0x7f050024;
@@ -282,11 +292,6 @@ containing a value of this type.
         public static final int large=0x7f050002;
         public static final int list_detail_fragment_text=0x7f050031;
         public static final int list_fragment_list=0x7f050032;
-        public static final int main_nav_back_tapper_fragment_row=0x7f05002e;
-        public static final int main_nav_child_list_fragment_row=0x7f05002d;
-        public static final int main_nav_greetings_fragment_row=0x7f05002b;
-        public static final int main_nav_list_fragment_row=0x7f05002c;
-        public static final int main_nav_step_fragment_row=0x7f05002f;
         public static final int normal=0x7f050001;
         public static final int picker_subtitle=0x7f050015;
         public static final int second_step_fragment_go_back_1=0x7f050034;
@@ -359,6 +364,11 @@ containing a value of this type.
         public static final int com_facebook_usersettingsfragment_log_in_button=0x7f080008;
         public static final int com_facebook_usersettingsfragment_logged_in=0x7f080009;
         public static final int com_facebook_usersettingsfragment_not_logged_in=0x7f08000a;
+        public static final int drawer_item_back_handled=0x7f08001d;
+        public static final int drawer_item_back_stack=0x7f08001e;
+        public static final int drawer_item_inter_fragment=0x7f08001c;
+        public static final int drawer_item_persistent_nested=0x7f080020;
+        public static final int drawer_item_persistent_ui=0x7f08001f;
     }
     public static final class style {
         /** 

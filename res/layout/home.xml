@@ -8,110 +8,124 @@
 	    android:layout_width="match_parent"
 	    android:layout_height="match_parent"
 	    >
+	    <!-- frame layout for fragments -->
 	    <FrameLayout
             android:id="@+id/home_frame_layout_for_fragments"
 	        android:layout_width="match_parent"
 	        android:layout_height="match_parent" 
-	        android:background="#eeeeee"
+	        android:background="@color/home_frame_layout_background"
 	        >
 	    </FrameLayout>
 	    
+	    <!-- drawer layout -->
 	    <LinearLayout 
 	        android:id="@+id/drawer"
 	        android:layout_width="match_parent"
 	        android:layout_height="match_parent"
 	        android:layout_gravity="left"
 	        android:orientation="vertical"
-	        android:background="#dddddd"
+	        android:background="@color/home_drawer_background"
   			>
-  			<TextView 
-  			    android:id="@+id/main_nav_greetings_fragment_row"
-  			    android:layout_width="fill_parent"
-  			    android:layout_height="50dp"
-  			    android:text="Greetings"
-  			    android:gravity="center"
-  			    android:background="@drawable/home_row_background_states"
-  			    >
-	    	</TextView>
-	    	
-  			<View 
-  			    android:layout_width="fill_parent"
-  			    android:layout_height="1dp"
-  			    android:background="#55666666"
-  			    >
-	    	</View>
-	    	
-  			<TextView 
-  			    android:id="@+id/main_nav_list_fragment_row"
-  			    android:layout_width="fill_parent"
-  			    android:layout_height="50dp"
-  			    android:text="List Fragment"
-  			    android:gravity="center"
-  			    android:background="@drawable/home_row_background_states"
-  			    >
-	    	</TextView>
-	    	
-  			<View 
-  			    android:layout_width="fill_parent"
-  			    android:layout_height="1dp"
-  			    android:background="#55666666"
-  			    >
-	    	</View>
   			
+	        <!-- Inter fragment communication row -->
   			<TextView 
-  			    android:id="@+id/main_nav_child_list_fragment_row"
-  			    android:layout_width="fill_parent"
-  			    android:layout_height="50dp"
-  			    android:text="Child List Fragment"
+  			    android:id="@+id/drawer_inter_fragment_fragment_row"
+  			    android:layout_width="match_parent"
+  			    android:layout_height="@dimen/drawer_irem_height"
+  			    android:text="@string/drawer_item_inter_fragment"
   			    android:gravity="center"
   			    android:background="@drawable/home_row_background_states"
   			    >
 	    	</TextView>
 	    	
+  			<!-- divider -->
   			<View 
-  			    android:layout_width="fill_parent"
-  			    android:layout_height="1dp"
-  			    android:background="#55666666"
+  			    android:layout_width="match_parent"
+  			    android:layout_height="@dimen/divider_height"
+  			    android:background="@color/divider_color"
   			    >
-	    	</View>
-  			
+	    	</View>  	
+  				    	
+  			<!-- Back handled fragment -->
   			<TextView 
-  			    android:id="@+id/main_nav_back_tapper_fragment_row"
-  			    android:layout_width="fill_parent"
-  			    android:layout_height="50dp"
-  			    android:text="Back Tapper"
+  			    android:id="@+id/drawer_back_handled_fragment_row"
+  			    android:layout_width="match_parent"
+  			    android:layout_height="@dimen/drawer_irem_height"
+  			    android:text="@string/drawer_item_back_handled"
   			    android:gravity="center"
   			    android:background="@drawable/home_row_background_states"
   			    >
 	    	</TextView>
 	    	
+  			<!-- divider -->
   			<View 
-  			    android:layout_width="fill_parent"
-  			    android:layout_height="1dp"
-  			    android:background="#55666666"
+  			    android:layout_width="match_parent"
+  			    android:layout_height="@dimen/divider_height"
+  			    android:background="@color/divider_color"
   			    >
 	    	</View>
-  			
+	    	
+  			<!-- back stack -->
   			<TextView 
-  			    android:id="@+id/main_nav_step_fragment_row"
-  			    android:layout_width="fill_parent"
-  			    android:layout_height="50dp"
-  			    android:text="Steps"
+  			    android:id="@+id/drawer_back_stack_row"
+  			    android:layout_width="match_parent"
+  			    android:layout_height="@dimen/drawer_irem_height"
+  			    android:text="@string/drawer_item_back_stack"
   			    android:gravity="center"
   			    android:background="@drawable/home_row_background_states"
   			    >
 	    	</TextView>
 	    	
+  			<!-- divider -->
   			<View 
-  			    android:layout_width="fill_parent"
-  			    android:layout_height="1dp"
-  			    android:background="#55666666"
+  			    android:layout_width="match_parent"
+  			    android:layout_height="@dimen/divider_height"
+  			    android:background="@color/divider_color"
   			    >
 	    	</View>
 	    	
+  			<!-- Persistent UI fragment -->
+  			<TextView 
+  			    android:id="@+id/drawer_persistent_ui_fragment_row"
+  			    android:layout_width="match_parent"
+  			    android:layout_height="@dimen/drawer_irem_height"
+  			    android:text="@string/drawer_item_persistent_ui"
+  			    android:gravity="center"
+  			    android:background="@drawable/home_row_background_states"
+  			    >
+	    	</TextView>
+	    	
+  			<!-- divider -->
+  			<View 
+  			    android:layout_width="match_parent"
+  			    android:layout_height="@dimen/divider_height"
+  			    android:background="@color/divider_color"
+  			    >
+	    	</View>
+	    	
+  			<!-- Persistent UI nested fragments -->
+  			<TextView 
+  			    android:id="@+id/drawer_persistent_ui_nested_fragment_row"
+  			    android:layout_width="match_parent"
+  			    android:layout_height="@dimen/drawer_irem_height"
+  			    android:text="@string/drawer_item_persistent_nested"
+  			    android:gravity="center"
+  			    android:background="@drawable/home_row_background_states"
+  			    >
+	    	</TextView>
+	    	
+  			<!-- divider -->
+  			<View 
+  			    android:layout_width="match_parent"
+  			    android:layout_height="@dimen/divider_height"
+  			    android:background="@color/divider_color"
+  			    >
+	    	</View>
+	    	
+  			<!-- facebook button -->
   			<RelativeLayout 
-  			    android:layout_width="fill_parent"
-  			    android:layout_height="fill_parent"
+  			    android:layout_width="match_parent"
+  			    android:layout_height="match_parent"
   			    >
   			    <Button
   			        android:id="@+id/home_facebook_button"

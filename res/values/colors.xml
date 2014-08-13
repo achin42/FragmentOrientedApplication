@@ -4,6 +4,10 @@
     <color name="light_blue">#6096e0</color>
     <color name="text_gray">#777777</color>
     
+    <color name="home_frame_layout_background">#eeeeee</color>
+    <color name="home_drawer_background">#dddddd</color>
     <color name="home_row_inactive">#dddddd</color>
     <color name="home_row_active">#55666666</color>
+    
+    <color name="divider_color">#55666666</color>
 </resources>

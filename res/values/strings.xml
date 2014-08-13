@@ -2,4 +2,11 @@
 
     <string name="app_name">SingleActivityApp</string>
 	<string name="applicationId">1460824187506218</string>
+	
+	<string name="drawer_item_inter_fragment">Inter Fragment Communication</string>
+	<string name="drawer_item_back_handled">Back Handled Fragment</string>
+	<string name="drawer_item_back_stack">Back Stack Handling</string>
+	<string name="drawer_item_persistent_ui">Persistent UI Fragment</string>
+	<string name="drawer_item_persistent_nested">Persistent UI Nested Fragment</string>
+	
 </resources>
