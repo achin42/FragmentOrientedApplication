@@ -18,7 +18,7 @@ import android.widget.Toast;
 
 import com.example.singleactivityapp.BackStackHandling.BackStackHandlerFragment;
 import com.example.singleactivityapp.InterFragmentCommunication.GreetingsFragment;
-import com.example.singleactivityapp.InterFragmentCommunication.GreetingsFragment2;
+import com.example.singleactivityapp.InterFragmentCommunication.GreetedFragment;
 import com.example.singleactivityapp.PersistentUI_NestedFragment.ChildListFragment;
 import com.example.singleactivityapp.backHandledFragment.BackHandledFragment;
 import com.example.singleactivityapp.base.BaseFragment;
@@ -295,7 +295,7 @@ public class Home extends FragmentActivity implements HomeInterface {
 
 	@Override
 	public void showGreetings(String name) {
-		showSecondTierFragment(GreetingsFragment2.instance(name), false);
+		showSecondTierFragment(GreetedFragment.instance(name), false);
 	}
 
 	@Override

@@ -14,7 +14,7 @@ import com.example.singleactivityapp.Utils.FacebookUtils;
 import com.example.singleactivityapp.base.BaseFragment;
 import com.facebook.Session;
 
-public class GreetingsFragment2 extends BaseFragment {
+public class GreetedFragment extends BaseFragment {
 	private static final String TAG = "Greetings Fragment 2";
 	private static final String EXTRA_NAME = "extra_name";
 	
@@ -23,10 +23,10 @@ public class GreetingsFragment2 extends BaseFragment {
 	private TextView facebookText;
 	private TextView greetingsText;
 	
-	public static GreetingsFragment2 instance(String name) {
+	public static GreetedFragment instance(String name) {
 		Bundle arguments = new Bundle();
 		arguments.putString(EXTRA_NAME, name);
-		GreetingsFragment2 greetingsFragment2 = new GreetingsFragment2();
+		GreetedFragment greetingsFragment2 = new GreetedFragment();
 		greetingsFragment2.setArguments(arguments);
 		return greetingsFragment2;
 	}
