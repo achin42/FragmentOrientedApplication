@@ -20,7 +20,7 @@ import com.example.singleactivityapp.BackStackHandling.StepFragment;
 import com.example.singleactivityapp.InterFragmentCommunication.GreetingsFragment;
 import com.example.singleactivityapp.InterFragmentCommunication.GreetingsFragment2;
 import com.example.singleactivityapp.PersistentUI_NestedFragment.ChildListFragment;
-import com.example.singleactivityapp.backHandledFragment.BackTapperFragment;
+import com.example.singleactivityapp.backHandledFragment.BackHandledFragment;
 import com.example.singleactivityapp.base.BaseFragment;
 import com.example.singleactivityapp.base.DrawerItemBaseFragment;
 import com.example.singleactivityapp.persistentUI_Fragment.ListDetailFragment;
@@ -178,8 +178,8 @@ public class Home extends FragmentActivity implements HomeInterface {
 			
 			@Override
 			public void onClick(View v) {
-				if(!(selectedDrawerItemFragment instanceof BackTapperFragment)) {
-					showFirstTierFragment(new BackTapperFragment());
+				if(!(selectedDrawerItemFragment instanceof BackHandledFragment)) {
+					showFirstTierFragment(new BackHandledFragment());
 				}
 				
 				closeDrawer();
