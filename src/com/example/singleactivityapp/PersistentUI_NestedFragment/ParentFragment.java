@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import com.example.singleactivityapp.R;
 import com.example.singleactivityapp.base.DrawerItemBaseFragment;
 
-public class ChildListFragment extends DrawerItemBaseFragment {
+public class ParentFragment extends DrawerItemBaseFragment {
 	private static final String TAG = "Child List Fragment";
 	
 	@Override
@@ -36,7 +36,7 @@ public class ChildListFragment extends DrawerItemBaseFragment {
 			
 			// Initialize UI.
 			FragmentTransaction ft = getChildFragmentManager().beginTransaction();
-			ListFragmentAsChild listFragmentAsChild = new ListFragmentAsChild();
+			NestedListFragment listFragmentAsChild = new NestedListFragment();
 			ft.add(R.id.child_list_fragment_frame, listFragmentAsChild, listFragmentAsChild.TAG);
 			ft.commit();
 		}
