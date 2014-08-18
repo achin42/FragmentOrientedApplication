@@ -253,7 +253,7 @@ public class Home extends FragmentActivity implements HomeInterface {
 	}
 
 	@Override
-	public void showSecondTierFragment(BaseFragment secondTierFragment, boolean withAnimation) {
+	public void addFragment(BaseFragment fragment, boolean withAnimation) {
 		FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
 		
 		if(withAnimation) {
@@ -262,8 +262,8 @@ public class Home extends FragmentActivity implements HomeInterface {
 			ft.setCustomAnimations(R.anim.fragment_slide_in_left, R.anim.fragment_slide_out_left, R.anim.fragment_slide_in_right, R.anim.fragment_slide_out_right);
 		}
 		
-		ft.replace(R.id.home_frame_layout_for_fragments, secondTierFragment, secondTierFragment.getTagText());
-		ft.addToBackStack(secondTierFragment.getTagText());
+		ft.replace(R.id.home_frame_layout_for_fragments, fragment, fragment.getTagText());
+		ft.addToBackStack(fragment.getTagText());
         ft.commit();
 	}
 	
@@ -295,12 +295,12 @@ public class Home extends FragmentActivity implements HomeInterface {
 
 	@Override
 	public void showGreetings(String name) {
-		showSecondTierFragment(GreetedFragment.instance(name), false);
+		addFragment(GreetedFragment.instance(name), false);
 	}
 
 	@Override
 	public void showListDetail(String word) {
-		showSecondTierFragment(ListDetailFragment.instance(word), true);
+		addFragment(ListDetailFragment.instance(word), true);
 	}
 	
 	
@@ -315,18 +315,18 @@ public class Home extends FragmentActivity implements HomeInterface {
 	 * backstack. Not a method to be used normally. 
 	 */
 	@Override
-	public void addMultipleSecondTierFragments(BaseFragment[] secondTierFragments) {
+	public void addMultipleFragments(BaseFragment[] fragments) {
 		// Initialize a Fragment Transaction.
 		FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
 		
 		// Record all steps for the transaction.
-		for(int i = 0 ; i < secondTierFragments.length ; i++) {
+		for(int i = 0 ; i < fragments.length ; i++) {
 			ft.setCustomAnimations(R.anim.fragment_slide_in_left, R.anim.fragment_slide_out_left, R.anim.fragment_slide_in_right, R.anim.fragment_slide_out_right);
-			ft.replace(R.id.home_frame_layout_for_fragments, secondTierFragments[i], secondTierFragments[i].getTagText());
+			ft.replace(R.id.home_frame_layout_for_fragments, fragments[i], fragments[i].getTagText());
 		}
 		
 		// Add the transaction to backStack with tag of first added fragment
-		ft.addToBackStack(secondTierFragments[0].getTagText());
+		ft.addToBackStack(fragments[0].getTagText());
 		
 		// Commit the transaction.
         ft.commit();

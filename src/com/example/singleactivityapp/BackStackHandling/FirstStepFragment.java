@@ -38,7 +38,7 @@ public class FirstStepFragment extends BaseFragment {
 			
 			@Override
 			public void onClick(View v) {
-				hostActivity.showSecondTierFragment(new SecondStepFragment(), true);
+				hostActivity.addFragment(new SecondStepFragment(), true);
 			}
 		});
 		

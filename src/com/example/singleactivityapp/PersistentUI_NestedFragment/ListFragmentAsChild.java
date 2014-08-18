@@ -14,8 +14,6 @@ import android.widget.ListView;
 
 import com.example.singleactivityapp.Home;
 import com.example.singleactivityapp.R;
-import com.example.singleactivityapp.R.id;
-import com.example.singleactivityapp.R.layout;
 import com.example.singleactivityapp.persistentUI_Fragment.ListDetailFragment;
 
 public class ListFragmentAsChild extends Fragment {
@@ -61,7 +59,7 @@ public class ListFragmentAsChild extends Fragment {
 				public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
 					// This fragment is not a usual case, so ignoring standards and just
 					// showing it without tampering rest of the code to accomodate this.
-					((Home) getActivity()).showSecondTierFragment(ListDetailFragment.instance(words.get(arg2)), true);
+					((Home) getActivity()).addFragment(ListDetailFragment.instance(words.get(arg2)), true);
 				}
 			});
 		}

@@ -38,7 +38,7 @@ public class BackStackHandlerFragment extends DrawerItemBaseFragment {
 			
 			@Override
 			public void onClick(View arg0) {
-				hostActivity.showSecondTierFragment(new FirstStepFragment(), true);
+				hostActivity.addFragment(new FirstStepFragment(), true);
 			}
 		});
 		
@@ -50,7 +50,7 @@ public class BackStackHandlerFragment extends DrawerItemBaseFragment {
 				BaseFragment[] secondTierFragments = new BaseFragment[2];
 				secondTierFragments[0] = new FirstStepFragment();
 				secondTierFragments[1] = new SecondStepFragment();
-				hostActivity.addMultipleSecondTierFragments(secondTierFragments);
+				hostActivity.addMultipleFragments(secondTierFragments);
 			}
 		});
 	}
