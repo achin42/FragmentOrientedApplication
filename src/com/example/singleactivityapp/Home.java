@@ -16,7 +16,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.singleactivityapp.BackStackHandling.StepFragment;
+import com.example.singleactivityapp.BackStackHandling.BackStackHandlerFragment;
 import com.example.singleactivityapp.InterFragmentCommunication.GreetingsFragment;
 import com.example.singleactivityapp.InterFragmentCommunication.GreetingsFragment2;
 import com.example.singleactivityapp.PersistentUI_NestedFragment.ChildListFragment;
@@ -190,8 +190,8 @@ public class Home extends FragmentActivity implements HomeInterface {
 			
 			@Override
 			public void onClick(View v) {
-				if(!(selectedDrawerItemFragment instanceof StepFragment)) {
-					showFirstTierFragment(new StepFragment());
+				if(!(selectedDrawerItemFragment instanceof BackStackHandlerFragment)) {
+					showFirstTierFragment(new BackStackHandlerFragment());
 				}
 				
 				closeDrawer();

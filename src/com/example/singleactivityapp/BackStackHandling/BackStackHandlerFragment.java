@@ -11,7 +11,7 @@ import com.example.singleactivityapp.R;
 import com.example.singleactivityapp.base.BaseFragment;
 import com.example.singleactivityapp.base.DrawerItemBaseFragment;
 
-public class StepFragment extends DrawerItemBaseFragment {
+public class BackStackHandlerFragment extends DrawerItemBaseFragment {
 	private static final String TAG = "Step Fragment";
 	
 	@Override
