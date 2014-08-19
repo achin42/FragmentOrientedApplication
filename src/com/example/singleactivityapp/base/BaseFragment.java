@@ -75,6 +75,7 @@ public abstract class BaseFragment extends Fragment {
 			throw new ClassCastException("Hosting activity must implement HostActivityInterface and FacebookInterface.");
 		} else {
 			hostActivityInterface = (HostActivityInterface) getActivity();
+			facebookInterface = (FacebookInterface) getActivity();
 		}
 	}
 	

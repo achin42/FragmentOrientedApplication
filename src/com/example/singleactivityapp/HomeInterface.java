@@ -4,12 +4,12 @@ import com.example.singleactivityapp.InterFragmentCommunication.GreetingsInterfa
 import com.example.singleactivityapp.Utils.FacebookInterface;
 import com.example.singleactivityapp.base.DrawerActivityInterface;
 import com.example.singleactivityapp.base.HostActivityInterface;
-import com.example.singleactivityapp.persistentUI_Fragment.ListFragment.ListFragmentCommunicator;
+import com.example.singleactivityapp.persistentUI_Fragment.ListDetailInterface;
 
 public interface HomeInterface
 extends HostActivityInterface,
 		DrawerActivityInterface,
 		FacebookInterface,
 		GreetingsInterface,
-		ListFragmentCommunicator
+		ListDetailInterface
 {}

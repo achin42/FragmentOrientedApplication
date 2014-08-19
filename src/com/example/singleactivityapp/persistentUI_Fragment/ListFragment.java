@@ -17,7 +17,7 @@ import com.example.singleactivityapp.base.DrawerItemBaseFragment;
 public class ListFragment extends DrawerItemBaseFragment {
 	private static final String TAG = "List Fragment";
 	
-	private ListFragmentCommunicator listFragmentCommunicator;
+	private ListDetailInterface listDetailInterface;
 	
 	private ListView listView;
 	
@@ -44,10 +44,10 @@ public class ListFragment extends DrawerItemBaseFragment {
 		if(!hasInitializedRootView) {
 			hasInitializedRootView = true;
 			
-			if(!(getActivity() instanceof ListFragmentCommunicator)) {
-				throw new ClassCastException("Hosting activity must implement ListFragmentCommunicator");
+			if(!(getActivity() instanceof ListDetailInterface)) {
+				throw new ClassCastException("Hosting activity must implement ListDetailInterface");
 			} else {
-				listFragmentCommunicator = (ListFragmentCommunicator) getActivity();
+				listDetailInterface = (ListDetailInterface) getActivity();
 			}
 		
 			ArrayList<String> words = new ArrayList<String>();
@@ -63,13 +63,9 @@ public class ListFragment extends DrawerItemBaseFragment {
 
 				@Override
 				public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
-					listFragmentCommunicator.showListDetail(listAdapter.getItem(arg2));
+					listDetailInterface.showListDetail(listAdapter.getItem(arg2));
 				}
 			});
 		}
-	}
-	
-	public interface ListFragmentCommunicator {
-		public void showListDetail(String word);
 	}
 }
