@@ -1,6 +1,6 @@
 package com.example.singleactivityapp;
 
-import com.example.singleactivityapp.InterFragmentCommunication.GreetingsFragment.GreetingsFragmentCommunicator;
+import com.example.singleactivityapp.InterFragmentCommunication.GreetingsInterface;
 import com.example.singleactivityapp.Utils.FacebookInterface;
 import com.example.singleactivityapp.base.DrawerActivityInterface;
 import com.example.singleactivityapp.base.HostActivityInterface;
@@ -10,6 +10,6 @@ public interface HomeInterface
 extends HostActivityInterface,
 		DrawerActivityInterface,
 		FacebookInterface,
-		GreetingsFragmentCommunicator,
+		GreetingsInterface,
 		ListFragmentCommunicator
 {}

@@ -17,8 +17,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.singleactivityapp.BackStackHandling.BackStackHandlerFragment;
+import com.example.singleactivityapp.InterFragmentCommunication.GreetingsRequestFragment;
 import com.example.singleactivityapp.InterFragmentCommunication.GreetingsFragment;
-import com.example.singleactivityapp.InterFragmentCommunication.GreetedFragment;
 import com.example.singleactivityapp.PersistentUI_NestedFragment.ParentFragment;
 import com.example.singleactivityapp.backHandledFragment.BackHandledFragment;
 import com.example.singleactivityapp.base.BaseFragment;
@@ -59,7 +59,7 @@ public class Home extends FragmentActivity implements HomeInterface {
 		drawer.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
 		openDrawer();
 		
-		showFirstTierFragment(new GreetingsFragment());
+		showDrawerItemFragment(new GreetingsRequestFragment());
 		
 		initUI();
 		
@@ -166,8 +166,8 @@ public class Home extends FragmentActivity implements HomeInterface {
 			
 			@Override
 			public void onClick(View v) {
-				if(!(selectedDrawerItemFragment instanceof GreetingsFragment)) {
-					showFirstTierFragment(new GreetingsFragment());
+				if(!(selectedDrawerItemFragment instanceof GreetingsRequestFragment)) {
+					showDrawerItemFragment(new GreetingsRequestFragment());
 				}
 				
 				closeDrawer();
@@ -179,7 +179,7 @@ public class Home extends FragmentActivity implements HomeInterface {
 			@Override
 			public void onClick(View v) {
 				if(!(selectedDrawerItemFragment instanceof BackHandledFragment)) {
-					showFirstTierFragment(new BackHandledFragment());
+					showDrawerItemFragment(new BackHandledFragment());
 				}
 				
 				closeDrawer();
@@ -191,7 +191,7 @@ public class Home extends FragmentActivity implements HomeInterface {
 			@Override
 			public void onClick(View v) {
 				if(!(selectedDrawerItemFragment instanceof BackStackHandlerFragment)) {
-					showFirstTierFragment(new BackStackHandlerFragment());
+					showDrawerItemFragment(new BackStackHandlerFragment());
 				}
 				
 				closeDrawer();
@@ -203,7 +203,7 @@ public class Home extends FragmentActivity implements HomeInterface {
 			@Override
 			public void onClick(View v) {
 				if(!(selectedDrawerItemFragment instanceof ListFragment)) {
-					showFirstTierFragment(new ListFragment());
+					showDrawerItemFragment(new ListFragment());
 				}
 				
 				closeDrawer();
@@ -215,7 +215,7 @@ public class Home extends FragmentActivity implements HomeInterface {
 			@Override
 			public void onClick(View v) {
 				if(!(selectedDrawerItemFragment instanceof ParentFragment)) {
-					showFirstTierFragment(new ParentFragment());
+					showDrawerItemFragment(new ParentFragment());
 				}
 				
 				closeDrawer();
@@ -239,7 +239,7 @@ public class Home extends FragmentActivity implements HomeInterface {
     	}
     }
 	
-	private void showFirstTierFragment(DrawerItemBaseFragment firstTierFragment) {
+	private void showDrawerItemFragment(DrawerItemBaseFragment firstTierFragment) {
 		// Clear backstack if app is not at a first-tier fragment
 		// and drawer is not locked, so that app could be switched between
 		// any first-tier fragment from anywhere.
@@ -269,11 +269,11 @@ public class Home extends FragmentActivity implements HomeInterface {
 	
 	/**
 	 * Clears transaction backstack. In this case, after this method
-	 * all (or any) second-tier fragment(s) will get removed and
-	 * view will resort back to current first-tier fragment.
+	 * all (or any) extended fragment(s) will get removed and
+	 * view will resort back to current drawer-item fragment.
 	 * 
 	 * Will only be useful when we are not locking the drawer while in
-	 * second-tier fragments and can switch between first-tier fragments
+	 * extended fragments and can switch between drawer-item fragments
 	 * from anywhere in the app.
 	 */
 	private void clearBackStack() {
@@ -295,7 +295,7 @@ public class Home extends FragmentActivity implements HomeInterface {
 
 	@Override
 	public void showGreetings(String name) {
-		addFragment(GreetedFragment.instance(name), false);
+		addFragment(GreetingsFragment.instance(name), false);
 	}
 
 	@Override
