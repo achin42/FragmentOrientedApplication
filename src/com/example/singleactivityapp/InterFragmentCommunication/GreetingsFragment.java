@@ -15,7 +15,7 @@ import com.example.singleactivityapp.base.BaseFragment;
 import com.facebook.Session;
 
 public class GreetingsFragment extends BaseFragment {
-	private static final String TAG = "Greetings Fragment 2";
+	private static final String TAG = "Greetings Fragment";
 	private static final String EXTRA_NAME = "extra_name";
 	
 	private RelativeLayout facebookButton;

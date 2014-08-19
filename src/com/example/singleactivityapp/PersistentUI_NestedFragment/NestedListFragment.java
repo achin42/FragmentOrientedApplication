@@ -17,7 +17,7 @@ import com.example.singleactivityapp.R;
 import com.example.singleactivityapp.persistentUI_Fragment.ListDetailFragment;
 
 public class NestedListFragment extends Fragment {
-	public static final String TAG = "List Fragment As Child";
+	public static final String TAG = "Nested List Fragment";
 			
 	private View _rootView;
 	private boolean hasInitializedRootView = false;

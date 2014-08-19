@@ -13,7 +13,7 @@ import com.example.singleactivityapp.R;
 import com.example.singleactivityapp.base.DrawerItemBaseFragment;
 
 public class GreetingsRequestFragment extends DrawerItemBaseFragment {
-	private static final String TAG = "Greetings Fragment";
+	private static final String TAG = "Greetings Request Fragment";
 
 	private GreetingsInterface greetingsInterface;
 	

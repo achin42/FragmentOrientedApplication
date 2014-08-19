@@ -10,7 +10,7 @@ import com.example.singleactivityapp.R;
 import com.example.singleactivityapp.base.DrawerItemBaseFragment;
 
 public class BackHandledFragment extends DrawerItemBaseFragment {
-	private static final String TAG = "Child List Fragment";
+	private static final String TAG = "Back Handled Fragment";
 	
 	private boolean hasText1Changed = false;
 	private boolean hasText2Changed = false;

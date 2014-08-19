@@ -10,7 +10,7 @@ import com.example.singleactivityapp.R;
 import com.example.singleactivityapp.base.DrawerItemBaseFragment;
 
 public class ParentFragment extends DrawerItemBaseFragment {
-	private static final String TAG = "Child List Fragment";
+	private static final String TAG = "Parent Fragment";
 	
 	@Override
 	public String getTagText() {

@@ -12,7 +12,7 @@ import com.example.singleactivityapp.base.BaseFragment;
 import com.example.singleactivityapp.base.DrawerItemBaseFragment;
 
 public class BackStackHandlerFragment extends DrawerItemBaseFragment {
-	private static final String TAG = "Step Fragment";
+	private static final String TAG = "Back Stack Handler Fragment";
 	
 	@Override
 	public String getTagText() {
