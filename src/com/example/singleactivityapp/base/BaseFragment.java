@@ -1,5 +1,7 @@
 package com.example.singleactivityapp.base;
 
+import com.example.singleactivityapp.Utils.FacebookInterface;
+
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -8,7 +10,8 @@ import android.view.ViewGroup;
 
 public abstract class BaseFragment extends Fragment {
 	
-	protected BaseActivityInterface hostActivity;
+	protected HostActivityInterface hostActivityInterface;
+	protected FacebookInterface facebookInterface;
 	
 	/**
 	 * Used to save from reinitializing Views when onViewCreated is called
@@ -68,10 +71,10 @@ public abstract class BaseFragment extends Fragment {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		if(!(getActivity()  instanceof BaseActivityInterface)) {
-			throw new ClassCastException("Hosting activity must implement BaseActivityInterface");
+		if(!(getActivity() instanceof HostActivityInterface && getActivity() instanceof FacebookInterface)) {
+			throw new ClassCastException("Hosting activity must implement HostActivityInterface and FacebookInterface.");
 		} else {
-			hostActivity = (BaseActivityInterface) getActivity();
+			hostActivityInterface = (HostActivityInterface) getActivity();
 		}
 	}
 	
@@ -80,6 +83,6 @@ public abstract class BaseFragment extends Fragment {
 		super.onStart();
 		
 		// Mark this fragment as the selected Fragment.
-		hostActivity.setSelectedFragment(this);
+		hostActivityInterface.setSelectedFragment(this);
 	}
 }

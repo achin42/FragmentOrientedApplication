@@ -38,7 +38,7 @@ public class GreetedFragment extends BaseFragment {
 
 	@Override
 	public boolean onBackPressed() {
-		hostActivity.popBackStack();
+		hostActivityInterface.popBackStack();
 		return true;
 	}
 	
@@ -67,7 +67,7 @@ public class GreetedFragment extends BaseFragment {
 				if(facebookSession.isOpened()) {
 					FacebookUtils.postOnWall(getActivity(), "From Single Activity Fragment", greetingsText.getText().toString(), "www.google.com");
 				} else {
-					hostActivity.onClickLogin();
+					facebookInterface.onClickLogin();
 				}
 			}
 		});

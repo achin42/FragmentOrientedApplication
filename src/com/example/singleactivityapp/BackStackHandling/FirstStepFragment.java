@@ -20,7 +20,7 @@ public class FirstStepFragment extends BaseFragment {
 
 	@Override
 	public boolean onBackPressed() {
-		hostActivity.popBackStack();
+		hostActivityInterface.popBackStack();
 		return true;
 	}
 	
@@ -38,7 +38,7 @@ public class FirstStepFragment extends BaseFragment {
 			
 			@Override
 			public void onClick(View v) {
-				hostActivity.addFragment(new SecondStepFragment(), true);
+				hostActivityInterface.addFragment(new SecondStepFragment(), true);
 			}
 		});
 		
@@ -48,7 +48,7 @@ public class FirstStepFragment extends BaseFragment {
 			@Override
 			public void onClick(View v) {
 				// Call popBackStack to move back one step
-				hostActivity.popBackStack();
+				hostActivityInterface.popBackStack();
 			}
 		});
 	}
