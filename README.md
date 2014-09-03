@@ -1,6 +1,8 @@
 Fragment Oriented Application
 ===========================
 
+A blueprint application to demonstrate the use of Fragments and few related concepts and techniques.
+
 <strong>Application Structure</strong>
 
 This application has following notable components:
