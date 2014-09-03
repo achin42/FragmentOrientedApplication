@@ -1,9 +1,9 @@
 Fragment Oriented Application
 ===========================
 
-<strong>Structure of Sample App</strong>
+<strong>Application Structure</strong>
 
-This sample application has following notable components:
+This application has following notable components:
 <ul>
 	<li><strong style="color: #000000; font-style: normal;">Home</strong> - This is the only activity, hosts a navigation drawer, which is the global UI for the app, and a FrameLayout that hosts fragments. Integrates facebook session. Implements HomeInterface.</li>
 	<li><strong>HomeInterface</strong> - This is a clubbed interface that extends all the interfaces that needs to be implemented in Home by various fragments (related to inter-fragment communication).</li>
