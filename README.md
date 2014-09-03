@@ -1,4 +1,4 @@
-FragmentOrientedApplication
+Fragment Oriented Application
 ===========================
 
 <strong>Structure of Sample App</strong>
@@ -11,5 +11,5 @@ This sample application has following notable components:
 	<li><strong>DrawerItemBaseFragment </strong>-Its an abstract base class for all drawer fragments. It extends BaseFragment. Fragments extending this would correspond to a section in Navigation Drawer.</li>
 </ul>
 In Home, we always have a reference to currently visible fragment and current drawer fragment, which is being revised respectively from these two abstract classes. Following references do this:
-<code>BaseFragment selectedFragment;</code>
+<code>BaseFragment selectedFragment;</code><br>
 <code>DrawerItemBaseFragment selectedDrawerItemFragment;</code>
